@@ -96,9 +96,9 @@ html body[data-header-resize="1"] .container-wrap,
 /* Header bar: 76px pill, semi-transparent, floating with margins */
 #header-outer {
   position: fixed !important;
-  top: 8px !important;
-  left: 6.6% !important;
-  right: 6.6% !important;
+  top: 23px !important;
+  left: calc(11% - 14px) !important;
+  right: calc(11% - 14px) !important;
   width: auto !important;
   z-index: 10000 !important;
   height: 76px !important;
@@ -116,16 +116,43 @@ html body[data-header-resize="1"] .container-wrap,
   height: 76px !important;
   min-height: 76px !important;
 }
-#header-outer[data-header-resize] .container {
-  padding-top: 0;
-  padding-bottom: 0;
+#header-outer[data-header-resize] .container,
+#header-outer header#top > .container {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  padding-left: 25px !important;
+  padding-right: 25px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
 }
 
-/* Logo: 60px height */
+/* Logo: 62px height */
 #header-outer #logo img {
-  max-height: 60px !important;
-  height: 60px !important;
+  max-height: 62px !important;
+  height: 62px !important;
   width: auto !important;
+}
+#header-outer #logo {
+  margin-right: 0 !important;
+}
+/* Fix Salient span_3/span_9 grid — logo column shrinks to content, nav fills rest */
+#header-outer header#top .row {
+  display: flex !important;
+  align-items: center !important;
+  flex-wrap: nowrap !important;
+  width: 100% !important;
+}
+#header-outer header#top .col.span_3 {
+  width: auto !important;
+  flex: 0 0 auto !important;
+  float: none !important;
+}
+#header-outer header#top .col.span_9 {
+  width: auto !important;
+  flex: 1 1 auto !important;
+  float: none !important;
+  margin-left: 1px !important;
 }
 
 body .container-wrap {
@@ -138,6 +165,10 @@ body .container-wrap {
 }
 
 /* CTA pill button */
+#header-outer .menu-item-2410 {
+  margin-left: 15px !important;
+  margin-right: 15px !important;
+}
 #header-outer .menu-item-2410 > a {
   font-size: 17px !important;
   font-family: 'Oswald', sans-serif !important;
@@ -152,7 +183,7 @@ body .container-wrap {
 #header-outer .menu-item-2410 > a:after {
   left: -17px !important;
   width: calc(100% + 34px) !important;
-  height: 54px !important;
+  height: 62px !important;
   top: 50% !important;
   transform: translateY(-50%) !important;
 }
