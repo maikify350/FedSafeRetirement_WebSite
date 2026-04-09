@@ -166,11 +166,11 @@ html body[data-header-resize="1"] .container-wrap,
 /* Header bar: 76px pill, semi-transparent, floating with margins */
 #header-outer {
   position: fixed !important;
-  top: 8px;
-  left: 6.6%;
-  right: 6.6%;
+  top: 8px !important;
+  left: 6.6% !important;
+  right: 6.6% !important;
   width: auto !important;
-  z-index: 10000;
+  z-index: 10000 !important;
   height: 76px !important;
   min-height: 76px !important;
   max-height: 76px !important;
@@ -178,9 +178,9 @@ html body[data-header-resize="1"] .container-wrap,
   background: rgba(255, 255, 255, 0.7) !important;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  box-shadow: none;
-  margin-top: 0;
-  overflow: visible;
+  box-shadow: none !important;
+  margin: 0 !important;
+  overflow: visible !important;
 }
 #header-outer header#top {
   height: 76px !important;
@@ -222,6 +222,9 @@ body .container-wrap {
 #header-outer .menu-item-2410 > a:after {
   left: -17px !important;
   width: calc(100% + 34px) !important;
+  height: 54px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
 }
 </style>
 
