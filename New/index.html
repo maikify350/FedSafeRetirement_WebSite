@@ -9,7 +9,7 @@
 
 
 
-<link rel="preload" href="assets/fonts/icomoon.woff" as="font" type="font/woff" crossorigin="anonymous"><link rel="preload" fetchpriority="high" as="image" href="assets/images/FedSafe-Homepage-New-Hero-1024x576_aHR0cHM6_1024x576.webp" media="(max-width: 690px)"><link rel="preload" fetchpriority="high" as="image" href="assets/images/FedSafe-Homepage-New-Hero_aHR0cHM6_1600x900.webp" media="(min-width: 691px)"><style id='wp-img-auto-sizes-contain-inline-css' type='text/css'>
+<link rel="preload" fetchpriority="high" as="image" href="assets/images/FedSafe-Homepage-New-Hero-1024x576_aHR0cHM6_1024x576.webp" media="(max-width: 690px)"><link rel="preload" fetchpriority="high" as="image" href="assets/images/FedSafe-Homepage-New-Hero_aHR0cHM6_1600x900.webp" media="(min-width: 691px)"><style id='wp-img-auto-sizes-contain-inline-css' type='text/css'>
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 /*# sourceURL=wp-img-auto-sizes-contain-inline-css */
 </style>
@@ -55,50 +55,103 @@ html body[data-header-resize="1"] .container-wrap,
 <link data-pagespeed-no-defer data-nowprocket data-wpacu-skip data-no-optimize data-noptimize rel='stylesheet' id='nectar-ocm-core-css' href='assets/css/core_aHR0cHM6.css' type='text/css' media='all' />
 <link data-pagespeed-no-defer data-nowprocket data-wpacu-skip data-no-optimize data-noptimize rel='stylesheet' id='nectar-ocm-fullscreen-legacy-css' href='assets/css/fullscreen-legacy_aHR0cHM6.css' type='text/css' media='all' />
 
+<!-- Google Fonts: Oswald (CORS-blocked from fedsafev2, must load from Google directly) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style id="header-nav-fix">
-/* Match nav layout to live staging site exactly */
+/* ── Exact match to live staging site (fedsafev2.zeppelinwebsites.com) ── */
+/* Values extracted via getComputedStyle on 2026-04-09 */
+
+/* Nav links: Oswald 15px weight-400 uppercase */
 #header-outer[data-lhe="animated_underline"] header#top nav > ul > li > a,
 #header-outer header#top nav > ul > li > a {
   white-space: nowrap;
-  font-size: 12px !important;
-  font-family: 'Open Sans', sans-serif !important;
-  font-weight: 700 !important;
-  letter-spacing: 0.3px;
+  font-size: 15px !important;
+  font-family: 'Oswald', sans-serif !important;
+  font-weight: 400 !important;
+  letter-spacing: normal;
   text-transform: uppercase;
-  line-height: 1;
+  line-height: 22px;
+  color: #161514;
+  padding: 0 !important;
 }
-/* Tighter padding between nav items — matches live site */
+
+/* Nav item spacing */
 #header-outer header#top nav > ul > li {
-  padding: 0 5px;
+  padding: 0;
+  margin: 0;
+  display: flex;
 }
-/* Prevent nav from wrapping at any desktop width */
+
+/* Prevent nav from wrapping */
 #header-outer header#top nav > ul {
   display: flex !important;
   flex-wrap: nowrap !important;
   align-items: center;
   white-space: nowrap;
 }
-/* Ensure the header bar has proper height and is fixed */
+
+/* Header bar: 76px pill, semi-transparent, floating with margins */
 #header-outer {
   position: fixed !important;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 8px;
+  left: 6.6%;
+  right: 6.6%;
+  width: auto !important;
   z-index: 10000;
+  height: 76px !important;
+  min-height: 76px !important;
+  max-height: 76px !important;
+  border-radius: 50px !important;
+  background: rgba(255, 255, 255, 0.7) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: none;
+  margin-top: 0;
+  overflow: visible;
 }
+#header-outer header#top {
+  height: 76px !important;
+  min-height: 76px !important;
+}
+#header-outer[data-header-resize] .container {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* Logo: 60px height */
+#header-outer #logo img {
+  max-height: 60px !important;
+  height: 60px !important;
+  width: auto !important;
+}
+
 body .container-wrap {
-  padding-top: 80px;
+  padding-top: 76px;
 }
-/* Fix Resources dropdown */
+
+/* Resources dropdown */
 #header-outer header#top nav > ul > li.menu-item-has-children > ul.sub-menu {
   min-width: 200px;
 }
-/* Button nav item — match live site sizing */
+
+/* CTA pill button */
 #header-outer .menu-item-2410 > a {
-  font-size: 11px !important;
-  padding-left: 18px !important;
-  padding-right: 18px !important;
+  font-size: 15px !important;
+  font-family: 'Oswald', sans-serif !important;
+  font-weight: 400 !important;
+  color: #fff !important;
+  padding: 0 !important;
+  letter-spacing: normal;
+  border-left-width: 17px !important;
+  border-right-width: 17px !important;
+}
+#header-outer .menu-item-2410 > a:before,
+#header-outer .menu-item-2410 > a:after {
+  left: -17px !important;
+  width: calc(100% + 34px) !important;
 }
 </style>
 </head><body class="home wp-singular page-template-default page page-id-1763 wp-theme-salient material wpb-js-composer js-comp-ver-8.6.1 vc_responsive" data-footer-reveal="false" data-footer-reveal-shadow="none" data-header-format="default" data-body-border="off" data-boxed-style="" data-header-breakpoint="1000" data-dropdown-style="minimal" data-cae="easeOutCubic" data-cad="1300" data-megamenu-width="contained" data-aie="none" data-ls="fancybox" data-apte="standard" data-hhun="0" data-fancy-form-rcs="1" data-form-style="minimal" data-form-submit="regular" data-is="minimal" data-button-style="rounded" data-user-account-button="false" data-contained-header="true" data-flex-cols="true" data-col-gap="default" data-header-inherit-rc="false" data-header-search="false" data-animated-anchors="true" data-ajax-transitions="false" data-full-width-header="false" data-slide-out-widget-area="true" data-slide-out-widget-area-style="fullscreen-alt" data-user-set-ocm="off" data-loading-animation="none" data-bg-header="true" data-responsive="1" data-ext-responsive="true" data-ext-padding="40" data-header-resize="0" data-header-color="custom" data-cart="false" data-remove-m-parallax="" data-remove-m-video-bgs="" data-m-animate="1" data-force-header-trans-color="light" data-smooth-scrolling="0" data-permanent-transparent="false" >
