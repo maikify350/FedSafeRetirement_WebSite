@@ -411,6 +411,21 @@ body .container-wrap {
   font-weight: 700;
   letter-spacing: 0;
   text-transform: none;
+}.wpb_wrapper:has(> .fedsafe-contact-phone-block) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.wpb_wrapper:has(> .fedsafe-contact-phone-block) > .nectar-responsive-text,
+.wpb_wrapper:has(> .fedsafe-contact-phone-block) > .nectar-cta,
+.wpb_wrapper:has(> .fedsafe-contact-phone-block) > .fedsafe-contact-phone-block {
+  width: 100%;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+.wpb_wrapper:has(> .fedsafe-contact-phone-block) > .nectar-responsive-text p {
+  margin-bottom: 0 !important;
 }
 </style>
 <style id="fedsafe-ported-page-polish-css">
