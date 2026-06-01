@@ -474,6 +474,10 @@ body img[data-nectar-img-src*="Double-Logo"] {
 }
 </style>
 <style id="fedsafe-responsive-header-css">
+
+#header-outer .fedsafe-header-sam-badge {
+  display: none;
+}
 /* Header phone link */
 #header-outer .fedsafe-header-phone {
   position: absolute;
@@ -543,6 +547,72 @@ body img[data-nectar-img-src*="Double-Logo"] {
     align-items: center;
   }
 }
+@media only screen and (max-width: 690px) {
+  #header-outer {
+    top: 20px !important;
+    left: 18px !important;
+    right: 18px !important;
+    height: 68px !important;
+    min-height: 68px !important;
+    max-height: 68px !important;
+    border-radius: 0 !important;
+    background: transparent !important; /* Mobile logo strip */
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+  #header-outer header#top {
+    height: 68px !important;
+    min-height: 68px !important;
+  }
+  #header-outer[data-header-resize] .container,
+  #header-outer header#top > .container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  #header-outer header#top .row {
+    justify-content: space-between !important;
+  }
+  #header-outer header#top .col.span_3 {
+    position: absolute !important;
+    left: 0 !important;
+    top: 50% !important;
+    z-index: 10001 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 7px !important;
+    transform: translateY(-50%) !important;
+  }
+  #header-outer #logo img {
+    height: 52px !important;
+    max-height: 52px !important;
+    filter: drop-shadow(0 2px 8px rgba(0, 48, 88, .12));
+  }
+  #header-outer .fedsafe-header-sam-badge {
+    display: block !important;
+    height: 48px !important;
+    max-height: 48px !important;
+    width: auto !important;
+    filter: drop-shadow(0 2px 8px rgba(0, 48, 88, .12));
+  }
+  #header-outer .col.span_9 {
+    display: flex !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+    flex: 1 1 100% !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+}
+@media only screen and (max-width: 390px) {
+  #header-outer #logo img {
+    height: 50px !important;
+    max-height: 50px !important;
+  }
+  #header-outer .fedsafe-header-sam-badge {
+    height: 45px !important;
+    max-height: 45px !important;
+  }
+}
 </style>
 <!-- FedSafe favicons -->
 <link rel="icon" href="../assets/favicons/favicon.ico" sizes="any">
@@ -610,6 +680,7 @@ body img[data-nectar-img-src*="Double-Logo"] {
 			<div class="col span_3">
 								<a id="logo" href="../" data-supplied-ml-starting-dark="false" data-supplied-ml-starting="false" data-supplied-ml="false" >
 					<img class="stnd skip-lazy default-logo dark-version" width="533" height="599" alt="FedSafe Retirement" src="../assets/logos/Fedsafe-Logo-Only_aHR0cHM6_533x599.webp" srcset="../assets/logos/Fedsafe-Logo-Only_aHR0cHM6_533x599.webp 1x, ../assets/logos/Fedsafe-Logo-Only_aHR0cHM6_533x599.webp 2x" />				</a>
+					<img class="fedsafe-header-sam-badge" src="../assets/logos/FedSafe-New-Badge_aHR0cHM6_641x815_mobile.webp" alt="SAM.gov Registered Federal Contractor" width="480" height="610" />
 							</div><!--/span_3-->
 
 			<div class="col span_9 col_last">
