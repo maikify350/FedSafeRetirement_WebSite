@@ -203,6 +203,53 @@ body .container-wrap {
   transform: translateY(-50%) !important;
 }
 </style>
+<style id="fedsafe-footer-legal-css">
+#footer-outer .fedsafe-legal-footer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 20px 26px;
+  color: #003058;
+  font-family: 'Oswald', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+#footer-outer .fedsafe-legal-footer-links a {
+  color: #003058;
+  text-decoration: none;
+}
+#footer-outer .fedsafe-legal-footer-links a:hover {
+  color: #c1260d;
+}
+</style>
+<style id="fedsafe-responsive-header-css">
+@media only screen and (min-width: 1321px) {
+  #header-outer {
+    left: clamp(42px, 5vw, 110px) !important;
+    right: clamp(42px, 5vw, 110px) !important;
+  }
+}
+@media only screen and (max-width: 1320px) and (min-width: 1000px) {
+  #header-outer {
+    left: clamp(50px, 8vw, 120px) !important;
+    right: clamp(50px, 8vw, 120px) !important;
+  }
+  #header-outer header#top nav {
+    display: none !important;
+  }
+  #header-outer .slide-out-widget-area-toggle {
+    display: flex !important;
+  }
+  #header-outer .col.span_9 {
+    display: flex !important;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+</style>
 </head><body class="wp-singular page-template-default page page-id-1651 wp-theme-salient material wpb-js-composer js-comp-ver-8.6.1 vc_responsive" data-footer-reveal="false" data-footer-reveal-shadow="none" data-header-format="default" data-body-border="off" data-boxed-style="" data-header-breakpoint="1000" data-dropdown-style="minimal" data-cae="easeOutCubic" data-cad="1300" data-megamenu-width="contained" data-aie="none" data-ls="fancybox" data-apte="standard" data-hhun="0" data-fancy-form-rcs="1" data-form-style="minimal" data-form-submit="regular" data-is="minimal" data-button-style="rounded" data-user-account-button="false" data-contained-header="true" data-flex-cols="true" data-col-gap="default" data-header-inherit-rc="false" data-header-search="false" data-animated-anchors="true" data-ajax-transitions="false" data-full-width-header="false" data-slide-out-widget-area="true" data-slide-out-widget-area-style="fullscreen-alt" data-user-set-ocm="off" data-loading-animation="none" data-bg-header="true" data-responsive="1" data-ext-responsive="true" data-ext-padding="40" data-header-resize="0" data-header-color="custom" data-cart="false" data-remove-m-parallax="" data-remove-m-video-bgs="" data-m-animate="1" data-force-header-trans-color="light" data-smooth-scrolling="0" data-permanent-transparent="false" >
 	
 	<script type="text/javascript">
@@ -280,7 +327,11 @@ body .container-wrap {
 <li id="menu-item-2408" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-2408"><a href="../meet-the-partners/"><span class="menu-title-text">Meet The Team</span></a></li>
 <li id="menu-item-2555" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-1651 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children nectar-regular-menu-item menu-item-2555"><a href="../resources/" aria-current="page" aria-haspopup="true" aria-expanded="false"><span class="menu-title-text">Resources</span></a>
 <ul class="sub-menu">
-	<li id="menu-item-2556" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item nectar-regular-menu-item menu-item-2556"><a href="../resources/#faqs" aria-current="page"><span class="menu-title-text">FAQs</span></a></li>
+	
+	<li id="menu-item-3001" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-3001"><a href="../benefits-analysis/index.html"><span class="menu-title-text">Benefits Analysis</span></a></li>
+	<li id="menu-item-3002" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-3002"><a href="../fegli-analysis/index.html"><span class="menu-title-text">FEGLI Analysis</span></a></li>
+	<li id="menu-item-3003" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-3003"><a href="../social-security-analysis/index.html"><span class="menu-title-text">Social Security Analysis</span></a></li>
+<li id="menu-item-2556" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item nectar-regular-menu-item menu-item-2556"><a href="../resources/#faqs" aria-current="page"><span class="menu-title-text">FAQs</span></a></li>
 	<li id="menu-item-2558" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item nectar-regular-menu-item menu-item-2558"><a href="../resources/#testimonials" aria-current="page"><span class="menu-title-text">Testimonials</span></a></li>
 </ul>
 </li>
@@ -1064,8 +1115,11 @@ Chesterfield, MO 63005</p>
 	</div>
 
 <div id="footer-outer" data-midnight="light" data-cols="4" data-custom-color="false" data-disable-copyright="true" data-matching-section-color="true" data-copyright-line="false" data-using-bg-img="false" data-bg-img-overlay="0.8" data-full-width="false" data-using-widget-area="false" data-link-hover="default">
-	
-		
+<div id="fedsafe-legal-footer-links" class="fedsafe-legal-footer-links">
+  <a href="../privacy-policy/">Privacy Policy</a>
+  <span aria-hidden="true">|</span>
+  <a href="../terms-of-service/">Terms of Service</a>
+</div>
 </div><!--/footer-outer-->
 
 
@@ -1092,7 +1146,11 @@ Chesterfield, MO 63005</p>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2408"><a href="../meet-the-partners/">Meet The Team</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-1651 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-2555"><a href="../resources/" aria-current="page" aria-haspopup="true" aria-expanded="false">Resources</a>
 <ul class="sub-menu">
-	<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-2556"><a href="../resources/#faqs" aria-current="page">FAQs</a></li>
+	
+	<li id="menu-item-3001" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-3001"><a href="../benefits-analysis/index.html"><span class="menu-title-text">Benefits Analysis</span></a></li>
+	<li id="menu-item-3002" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-3002"><a href="../fegli-analysis/index.html"><span class="menu-title-text">FEGLI Analysis</span></a></li>
+	<li id="menu-item-3003" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-3003"><a href="../social-security-analysis/index.html"><span class="menu-title-text">Social Security Analysis</span></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-2556"><a href="../resources/#faqs" aria-current="page">FAQs</a></li>
 	<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-2558"><a href="../resources/#testimonials" aria-current="page">Testimonials</a></li>
 </ul>
 </li>

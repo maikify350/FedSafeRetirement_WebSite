@@ -348,6 +348,89 @@ body .container-wrap {
 }
 </style>
 
+<style id="fedsafe-footer-legal-css">
+#footer-outer .fedsafe-legal-footer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 20px 26px;
+  color: #003058;
+  font-family: 'Oswald', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+#footer-outer .fedsafe-legal-footer-links a {
+  color: #003058;
+  text-decoration: none;
+}
+#footer-outer .fedsafe-legal-footer-links a:hover {
+  color: #c1260d;
+}
+</style>
+<style id="fedsafe-ported-page-polish-css">
+.subpage-content-wrap .elementor-invisible,
+.subpage-content-wrap .elementor-invisible *,
+.elementor-subpage-content .elementor-invisible,
+.elementor-subpage-content .elementor-invisible * {
+  visibility: visible !important;
+  opacity: 1 !important;
+  animation: none !important;
+}
+.subpage-content-wrap > .elementor > .elementor-section:first-child,
+.elementor-subpage-content > .elementor > .elementor-section:first-child {
+  background: transparent !important;
+  min-height: 0 !important;
+  padding-bottom: 24px !important;
+}
+.subpage-content-wrap > .elementor > .elementor-section:first-child .elementor-heading-title,
+.elementor-subpage-content > .elementor > .elementor-section:first-child .elementor-heading-title {
+  color: #003058 !important;
+  text-shadow: none !important;
+}
+.subpage-content-wrap .elementor-element-5e97699 .elementor-heading-title {
+  color: #003058 !important;
+  text-shadow: none !important;
+}
+.subpage-content-wrap .elementor-widget-image img,
+.elementor-subpage-content .elementor-widget-image img {
+  max-width: min(100%, 980px);
+  height: auto;
+}
+@media only screen and (max-width: 690px) {
+  .subpage-content-wrap > .elementor > .elementor-section:first-child,
+  .elementor-subpage-content > .elementor > .elementor-section:first-child {
+    padding-bottom: 12px !important;
+  }
+}
+</style>
+<style id="fedsafe-responsive-header-css">
+@media only screen and (min-width: 1321px) {
+  #header-outer {
+    left: clamp(42px, 5vw, 110px) !important;
+    right: clamp(42px, 5vw, 110px) !important;
+  }
+}
+@media only screen and (max-width: 1320px) and (min-width: 1000px) {
+  #header-outer {
+    left: clamp(50px, 8vw, 120px) !important;
+    right: clamp(50px, 8vw, 120px) !important;
+  }
+  #header-outer header#top nav {
+    display: none !important;
+  }
+  #header-outer .slide-out-widget-area-toggle {
+    display: flex !important;
+  }
+  #header-outer .col.span_9 {
+    display: flex !important;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+</style>
 </head><body class="home wp-singular page-template-default page page-id-1763 wp-theme-salient material wpb-js-composer js-comp-ver-8.6.1 vc_responsive" data-footer-reveal="false" data-footer-reveal-shadow="none" data-header-format="default" data-body-border="off" data-boxed-style="" data-header-breakpoint="1000" data-dropdown-style="minimal" data-cae="easeOutCubic" data-cad="1300" data-megamenu-width="contained" data-aie="none" data-ls="fancybox" data-apte="standard" data-hhun="0" data-fancy-form-rcs="1" data-form-style="minimal" data-form-submit="regular" data-is="minimal" data-button-style="rounded" data-user-account-button="false" data-contained-header="true" data-flex-cols="true" data-col-gap="default" data-header-inherit-rc="false" data-header-search="false" data-animated-anchors="true" data-ajax-transitions="false" data-full-width-header="false" data-slide-out-widget-area="true" data-slide-out-widget-area-style="fullscreen-alt" data-user-set-ocm="off" data-loading-animation="none" data-bg-header="true" data-responsive="1" data-ext-responsive="true" data-ext-padding="40" data-header-resize="0" data-header-color="custom" data-cart="false" data-remove-m-parallax="" data-remove-m-video-bgs="" data-m-animate="1" data-force-header-trans-color="light" data-smooth-scrolling="0" data-permanent-transparent="false" >
 	
 	<script type="text/javascript">
@@ -674,14 +757,64 @@ Chesterfield, MO 63005</p>
 	</div>
 
 <div id="footer-outer" data-midnight="light" data-cols="4" data-custom-color="false" data-disable-copyright="true" data-matching-section-color="true" data-copyright-line="false" data-using-bg-img="false" data-bg-img-overlay="0.8" data-full-width="false" data-using-widget-area="false" data-link-hover="default">
-	
-		
+<div id="fedsafe-legal-footer-links" class="fedsafe-legal-footer-links">
+  <a href="../privacy-policy/">Privacy Policy</a>
+  <span aria-hidden="true">|</span>
+  <a href="../terms-of-service/">Terms of Service</a>
+</div>
 </div><!--/footer-outer-->
 <!-- End Standard Site Footer -->
 
 		</div><!--/row-->
 	</div><!--/container-->
 </div><!--/container-wrap-->
+<div id="slide-out-widget-area-bg" class="fullscreen-alt solid">
+		<div class="bg-inner"></div>		</div>
+
+		<div id="slide-out-widget-area" role="dialog" aria-modal="true" aria-label="Off Canvas Menu" class="fullscreen-alt" data-dropdown-func="default" data-back-txt="Back">
+
+			<div class="inner-wrap">
+			<div class="inner" data-prepend-menu-mobile="false">
+
+				<a class="slide_out_area_close" href="#"><span class="screen-reader-text">Close Menu</span>
+					<span class="close-wrap"> <span class="close-line close-line1" role="presentation"></span> <span class="close-line close-line2" role="presentation"></span> </span>				</a>
+
+
+									<div class="off-canvas-menu-container mobile-only" role="navigation">
+
+						
+						<ul class="menu">
+							<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-1834"><a href="../">Home</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-2041"><a href="../#about">Who We Are</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-2042"><a href="../#services">What We Do</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-2303"><a href="../#how">How We Do It</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-2405 current_page_item menu-item-2408"><a href="../meet-the-partners/" aria-current="page">Meet The Team</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2555"><a href="../resources/" aria-haspopup="true" aria-expanded="false">Resources</a>
+<ul class="sub-menu">
+	
+	<li id="menu-item-3001" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-3001"><a href="../benefits-analysis/index.html"><span class="menu-title-text">Benefits Analysis</span></a></li>
+	<li id="menu-item-3002" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-3002"><a href="../fegli-analysis/index.html"><span class="menu-title-text">FEGLI Analysis</span></a></li>
+	<li id="menu-item-3003" class="menu-item menu-item-type-post_type menu-item-object-page nectar-regular-menu-item menu-item-3003"><a href="../social-security-analysis/index.html"><span class="menu-title-text">Social Security Analysis</span></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2556"><a href="../resources/#faqs">FAQs</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2558"><a href="../resources/#testimonials">Testimonials</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2437"><a href="../main-contact/">Contact</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2410"><a href="../think-youre-ready/">Schedule A Free Retirement Review</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2409"><a href="../for-agencies/">For Agencies</a></li>
+
+						</ul>
+
+						<ul class="menu secondary-header-items">
+													</ul>
+					</div>
+					
+				</div>
+
+				<div class="bottom-meta-wrap"></div><!--/bottom-meta-wrap--></div> <!--/inner-wrap-->
+				</div>
+		
+
 </div><!--/ajax-content-wrap-->
 </div></div>
 
