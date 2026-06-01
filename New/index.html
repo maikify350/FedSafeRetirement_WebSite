@@ -1770,26 +1770,62 @@
 }
 @media only screen and (max-width: 690px) {
   .fedsafe-home-hero-copy {
+    width: 300px;
+    max-width: calc(100vw - 72px);
+    box-sizing: border-box;
     min-height: 620px;
     justify-content: flex-start;
     padding-top: 38px;
+    padding-left: 0;
+    padding-right: 0;
   }
   .fedsafe-home-hero-copy h1 {
-    font-size: 36px;
-    line-height: 1.04;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    font-size: 31px;
+    line-height: 1.06;
+    text-wrap: wrap;
+    overflow-wrap: anywhere;
   }
   .fedsafe-home-hero-copy p {
-    font-size: 17px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    font-size: 15px;
     line-height: 1.45;
+    overflow-wrap: anywhere;
   }
   .fedsafe-home-hero-actions {
     width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
   .fedsafe-home-hero-actions a {
     width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding-right: 14px;
+    padding-left: 14px;
+    font-size: 15px;
+    line-height: 1.15;
+    white-space: normal;
+    overflow-wrap: anywhere;
   }
   .fedsafe-home-hero-trust {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
     grid-template-columns: 1fr;
+  }
+  .fedsafe-home-hero-trust div,
+  .fedsafe-home-hero-trust small {
+    max-width: 100%;
+    font-size: 13px;
+    overflow-wrap: anywhere;
+  }
+  .fedsafe-home-hero-trust small {
+    font-size: 11px;
   }
 }
 </style>
