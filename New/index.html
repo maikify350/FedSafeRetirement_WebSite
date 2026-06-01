@@ -1830,6 +1830,52 @@
 }
 </style>
 <style id="fedsafe-responsive-header-css">
+/* Header phone link */
+#header-outer .fedsafe-header-phone {
+  position: absolute;
+  top: -20px;
+  right: 28px;
+  z-index: 10002;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  min-height: 24px;
+  padding: 0 12px;
+  border: 1px solid rgba(255,255,255,.68);
+  border-radius: 999px;
+  background: #003058;
+  color: #fff !important;
+  box-shadow: 0 6px 18px rgba(0, 48, 88, .16);
+  font-family: 'Oswald', sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0 !important;
+  line-height: 1 !important;
+  text-decoration: none !important;
+  white-space: nowrap;
+}
+#header-outer .fedsafe-header-phone:hover {
+  background: #c1260d;
+  color: #fff !important;
+}
+@media only screen and (max-width: 690px) {
+  #header-outer .fedsafe-header-phone {
+    top: -18px;
+    right: 22px;
+    min-height: 22px;
+    padding: 0 10px;
+    font-size: 12px !important;
+  }
+}
+@media only screen and (max-width: 390px) {
+  #header-outer .fedsafe-header-phone {
+    right: 18px;
+    font-size: 11px !important;
+    padding: 0 8px;
+  }
+}
+
+
 @media only screen and (min-width: 1321px) {
   #header-outer {
     left: clamp(42px, 5vw, 110px) !important;
@@ -1963,6 +2009,7 @@
 								<div class="nectar-mobile-only mobile-header">
 									<div class="inner"></div>
 								</div>
+								<a class="fedsafe-header-phone" href="tel:+17713337233" aria-label="Call FedSafe Retirement at +1 771 333 7233">1-771-333-SAFE</a>
 								<div class="slide-out-widget-area-toggle mobile-icon fullscreen-alt"
 									data-custom-color="false" data-icon-animation="simple-transform">
 									<div> <a href="#slide-out-widget-area" role="button" aria-label="Navigation Menu"

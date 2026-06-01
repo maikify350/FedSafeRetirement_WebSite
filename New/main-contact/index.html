@@ -219,6 +219,52 @@ body .container-wrap {
 }
 </style>
 <style id="fedsafe-responsive-header-css">
+/* Header phone link */
+#header-outer .fedsafe-header-phone {
+  position: absolute;
+  top: -20px;
+  right: 28px;
+  z-index: 10002;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  min-height: 24px;
+  padding: 0 12px;
+  border: 1px solid rgba(255,255,255,.68);
+  border-radius: 999px;
+  background: #003058;
+  color: #fff !important;
+  box-shadow: 0 6px 18px rgba(0, 48, 88, .16);
+  font-family: 'Oswald', sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0 !important;
+  line-height: 1 !important;
+  text-decoration: none !important;
+  white-space: nowrap;
+}
+#header-outer .fedsafe-header-phone:hover {
+  background: #c1260d;
+  color: #fff !important;
+}
+@media only screen and (max-width: 690px) {
+  #header-outer .fedsafe-header-phone {
+    top: -18px;
+    right: 22px;
+    min-height: 22px;
+    padding: 0 10px;
+    font-size: 12px !important;
+  }
+}
+@media only screen and (max-width: 390px) {
+  #header-outer .fedsafe-header-phone {
+    right: 18px;
+    font-size: 11px !important;
+    padding: 0 8px;
+  }
+}
+
+
 @media only screen and (min-width: 1321px) {
   #header-outer {
     left: clamp(42px, 5vw, 110px) !important;
@@ -313,6 +359,7 @@ body .container-wrap {
 
 			<div class="col span_9 col_last">
 									<div class="nectar-mobile-only mobile-header"><div class="inner"></div></div>
+					<a class="fedsafe-header-phone" href="tel:+17713337233" aria-label="Call FedSafe Retirement at +1 771 333 7233">1-771-333-SAFE</a>
 													<div class="slide-out-widget-area-toggle mobile-icon fullscreen-alt" data-custom-color="false" data-icon-animation="simple-transform">
 						<div> <a href="#slide-out-widget-area" role="button" aria-label="Navigation Menu" aria-expanded="false" class="closed">
 							<span class="screen-reader-text">Menu</span><span aria-hidden="true"> <i class="lines-button x2" data-variant="even_lines"> <i class="lines"></i> </i> </span>						</a></div>
@@ -361,6 +408,34 @@ body .container-wrap {
 <div class="vc_column-inner"><div class="column-bg-overlay-wrap column-bg-layer" data-bg-animation="none"><div class="column-bg-overlay" style="opacity: 1; background-color: #C5C5C5;"></div></div>
 <div class="wpb_wrapper">
 <style>
+
+/* Contact-page phone block */
+body.page-id-2435 .fedsafe-contact-phone-block {
+  margin: 10px 0 18px;
+  color: #003058;
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+body.page-id-2435 .fedsafe-contact-phone-block a {
+  color: #003058;
+  text-decoration: none;
+}
+body.page-id-2435 .fedsafe-contact-phone-block a:hover {
+  color: #c1260d;
+}
+body.page-id-2435 .fedsafe-contact-phone-block small {
+  display: block;
+  margin-top: 4px;
+  color: #1d2c42;
+  font-family: Manrope, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: none;
+}
 body.page-id-2435,
 body.page-id-2435 .container-wrap {
   font-size: 16px !important;
@@ -631,7 +706,7 @@ once the decisions are clear.</p>
 		<div class="vc_column-inner" >
 		<div class="wpb_wrapper">
 			<div class="nectar-responsive-text nectar-link-underline-effect" data-inherit-heading-family="h3"><p>Contact Us</p>
-</div><div class="nectar-responsive-text nectar-link-underline-effect" data-inherit-heading-family="p"><p>100 Chesterfield Business Pkwy<br />
+</div><div class="fedsafe-contact-phone-block"><a href="tel:+17713337233">1-771-333-SAFE</a><small>+1 771 333 7233</small></div><div class="nectar-responsive-text nectar-link-underline-effect" data-inherit-heading-family="p"><p>100 Chesterfield Business Pkwy<br />
 2nd Floor<br />
 Chesterfield, MO 63005</p>
 </div><div class="nectar-cta  alignment_tablet_default alignment_phone_default display_tablet_inherit display_phone_inherit " data-color="default" data-using-bg="false" data-style="arrow-animation" data-display="block" data-alignment="center" data-text-color="std" style="margin-top: -8px;  --nectar-button-color: var(--nectar-default); --nectar-icon-gap: 10px; "><span class="nectar-button-type"><span class="link_wrap" ><a  class="link_text" role="button" href="../main-contact/#contact"><span class="text">Ask Us A Question</span><svg class="next-arrow" aria-hidden="true" width="20px" height="25px" viewBox="0 0 50 80" xml:space="preserve">
