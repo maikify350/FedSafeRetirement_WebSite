@@ -2049,22 +2049,33 @@
   #header-outer header#top .col.span_3 {
     position: absolute !important;
     left: 0 !important;
-    top: 50% !important;
+    top: 0 !important;
     z-index: 10001 !important;
     display: flex !important;
-    align-items: center !important;
+    align-items: flex-start !important;
     gap: 7px !important;
-    transform: translateY(-50%) !important;
+    transform: none !important;
   }
-  #header-outer #logo img {
+  #header-outer #top #logo {
+    align-self: flex-start !important;
+    display: flex !important;
+    align-items: flex-start !important;
     height: 52px !important;
+    min-height: 52px !important;
     max-height: 52px !important;
+  }
+  body.wp-singular.page #header-outer #top #logo img.stnd,
+  #header-outer #top #logo img {
+    height: 52px !important;
+    min-height: 52px !important;
+    max-height: 52px !important;
+    width: auto !important;
     filter: drop-shadow(0 2px 8px rgba(0, 48, 88, .12));
   }
   #header-outer .fedsafe-header-sam-badge {
     display: block !important;
-    height: 48px !important;
-    max-height: 48px !important;
+    height: 52px !important;
+    max-height: 52px !important;
     width: auto !important;
     filter: drop-shadow(0 2px 8px rgba(0, 48, 88, .12));
   }
@@ -2078,13 +2089,21 @@
   }
 }
 @media only screen and (max-width: 390px) {
-  #header-outer #logo img {
+  #header-outer #top #logo {
+    align-self: flex-start !important;
+height: 50px !important;
+    min-height: 50px !important;
+    max-height: 50px !important;
+  }
+  body.wp-singular.page #header-outer #top #logo img.stnd,
+  #header-outer #top #logo img {
     height: 50px !important;
+    min-height: 50px !important;
     max-height: 50px !important;
   }
   #header-outer .fedsafe-header-sam-badge {
-    height: 45px !important;
-    max-height: 45px !important;
+    height: 50px !important;
+    max-height: 50px !important;
   }
 }
 </style>
