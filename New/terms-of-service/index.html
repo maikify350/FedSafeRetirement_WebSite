@@ -217,6 +217,76 @@ body .container-wrap {
   padding-top: 140px;
   padding-bottom: 60px;
 }
+
+body .container-wrap.fedsafe-legal-page {
+  font-size: 16px !important;
+}
+.fedsafe-legal-shell,
+.fedsafe-legal-shell * {
+  letter-spacing: 0 !important;
+}
+.fedsafe-legal-shell p,
+.fedsafe-legal-shell li {
+  font-family: Manrope, Arial, sans-serif !important;
+  font-size: 16px !important;
+  line-height: 1.65 !important;
+  font-weight: 500 !important;
+  text-transform: none !important;
+}
+.fedsafe-legal-shell h2 {
+  font-size: clamp(22px, 2.5vw, 30px) !important;
+}
+.fedsafe-legal-shell h3 {
+  font-size: 18px !important;
+}
+.fedsafe-legal-shell h2[id^="name-email"],
+.fedsafe-legal-shell h2[id^="ip-address"],
+.fedsafe-legal-shell h2[id^="website-usage"],
+.fedsafe-legal-shell h2[id^="cookies"],
+.fedsafe-legal-shell h2[id^="records"],
+.fedsafe-legal-shell h2[id^="appointment"],
+.fedsafe-legal-shell h2[id^="service-history"],
+.fedsafe-legal-shell h2[id^="providing"],
+.fedsafe-legal-shell h2[id^="processing"],
+.fedsafe-legal-shell h2[id^="enhancing"],
+.fedsafe-legal-shell h2[id^="ensuring"],
+.fedsafe-legal-shell h2[id^="we-maintain"],
+.fedsafe-legal-shell h2[id^="all-opt-out"],
+.fedsafe-legal-shell h2[id^="standard-message"],
+.fedsafe-legal-shell h2[id^="encryption"],
+.fedsafe-legal-shell h2[id^="secure"],
+.fedsafe-legal-shell h2[id^="regular"],
+.fedsafe-legal-shell h2[id^="employee"],
+.fedsafe-legal-shell h2[id^="in-case"] {
+  margin: 0 0 12px !important;
+  color: #252525 !important;
+  font-family: Manrope, Arial, sans-serif !important;
+  font-size: 16px !important;
+  line-height: 1.65 !important;
+  font-weight: 500 !important;
+  text-transform: none !important;
+}
+body .img-with-aniamtion-wrap.custom-width-50pct,
+body .img-with-aniamtion-wrap.custom-width-50pct .hover-wrap,
+body .img-with-aniamtion-wrap.custom-width-50pct .hover-wrap-inner,
+body .img-with-aniamtion-wrap.custom-width-50pct .inner {
+  width: 220px !important;
+  max-width: 100% !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+body img[src*="Double-Logo"],
+body img[srcset*="Double-Logo"],
+body img[data-nectar-img-src*="Double-Logo"] {
+  display: block !important;
+  width: 220px !important;
+  max-width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+  object-fit: contain !important;
+}
 .fedsafe-legal-shell {
   max-width: 980px;
   margin: 0 auto;
@@ -265,6 +335,16 @@ body .container-wrap {
   margin: 0 0 16px;
 }
 @media only screen and (max-width: 690px) {
+
+  body .img-with-aniamtion-wrap.custom-width-50pct,
+  body .img-with-aniamtion-wrap.custom-width-50pct .hover-wrap,
+  body .img-with-aniamtion-wrap.custom-width-50pct .hover-wrap-inner,
+  body .img-with-aniamtion-wrap.custom-width-50pct .inner,
+  body img[src*="Double-Logo"],
+  body img[srcset*="Double-Logo"],
+  body img[data-nectar-img-src*="Double-Logo"] {
+    width: 180px !important;
+  }
   .fedsafe-legal-page {
     padding-top: 112px;
   }
