@@ -1,14 +1,6 @@
 {
+  "buildCommand": "node vercel-build.mjs",
+  "outputDirectory": "dist",
   "cleanUrls": true,
-  "trailingSlash": true,
-  "rewrites": [
-    {
-      "source": "/assets/:path*",
-      "destination": "/New/assets/:path*"
-    },
-    {
-      "source": "/:path*",
-      "destination": "/New/:path*"
-    }
-  ]
+  "trailingSlash": true
 }
