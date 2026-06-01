@@ -512,9 +512,9 @@ body .container-wrap {
 </div><div class="nectar-responsive-text nectar-link-underline-effect"><div class="page" title="Page 3">
 <div class="layoutArea">
 <div class="column">
-<p>â€¢ A faster, more productive consultation<br />
-â€¢ Fewer surprises and clearer tradeoffs<br />
-â€¢ A plan that reflects your actual benefits, timing, and priorities</p>
+<p>&bull; A faster, more productive consultation<br />
+&bull; Fewer surprises and clearer tradeoffs<br />
+&bull; A plan that reflects your actual benefits, timing, and priorities</p>
 </div>
 </div>
 </div>
@@ -534,70 +534,161 @@ body .container-wrap {
 	<div  class="vc_col-sm-8 wpb_column column_container vc_column_container col child_column no-extra-padding inherit_tablet inherit_phone flex_gap_desktop_10px "   data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-animation="" data-delay="0" >
 		<div class="vc_column-inner" >
 		<div class="wpb_wrapper">
-			<!--\ Static\ HTML\ Contact\ Form\ \(replaces\ Ninja\ Forms\ which\ requires\ WordPress\)\ -->
+			<!-- Static HTML Contact Form (replaces Ninja Forms which requires WordPress) -->
 <style>
-\.fsr-contact-form\ \{\ font-family:\ -apple-system,\ BlinkMacSystemFont,\ 'Segoe\ UI',\ Roboto,\ sans-serif;\ }
-\.fsr-contact-form\ \.fsr-fields-note\ \{\ font-size:\ 13px;\ color:\ \#555;\ margin-bottom:\ 14px;\ }
-\.fsr-row-4col\ \{\ display:\ grid;\ grid-template-columns:\ 1fr\ 1fr\ 1fr\ 1fr;\ gap:\ 12px;\ margin-bottom:\ 12px;\ }
-\.fsr-row-3col\ \{\ display:\ grid;\ grid-template-columns:\ 25%\ 32%\ 43%;\ gap:\ 12px;\ margin-bottom:\ 12px;\ }
-\.fsr-row-1col\ \{\ margin-bottom:\ 12px;\ }
-\.fsr-field\ label\ \{\ display:\ block;\ font-size:\ 13px;\ font-weight:\ 600;\ color:\ \#222;\ margin-bottom:\ 4px;\ }
-\.fsr-field\ label\ \.req\ \{\ color:\ \#C1272B;\ }
-\.fsr-field\ input\[type="text"],
-\.fsr-field\ input\[type="email"],
-\.fsr-field\ input\[type="tel"],
-\.fsr-field\ textarea\ \{
-\ \ width:\ 100%;\ box-sizing:\ border-box;
-\ \ padding:\ 8px\ 10px;\ border:\ 1px\ solid\ \#bbb;\ border-radius:\ 3px;
-\ \ font-size:\ 14px;\ background:\ \#fff;\ color:\ \#333;
+.fsr-contact-form {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important;
+  font-size: 16px !important;
+  color: #172033 !important;
 }
-\.fsr-field\ textarea\ \{\ min-height:\ 110px;\ resize:\ vertical;\ }
-\.fsr-consent\ \{\ font-size:\ 12px;\ color:\ \#333;\ line-height:\ 1\.6;\ margin-bottom:\ 14px;\ }
-\.fsr-submit-btn\ \{
-\ \ display:\ inline-block;\ padding:\ 10px\ 28px;
-\ \ background:\ \#22376D;\ color:\ \#fff;\ border:\ none;
-\ \ border-radius:\ 20px;\ font-size:\ 14px;\ font-weight:\ 600;
-\ \ cursor:\ pointer;\ letter-spacing:\ 0\.5px;
+.fsr-fields-note {
+  margin-bottom: 18px !important;
+  color: #526070 !important;
+  font-family: inherit !important;
+  font-size: 16px !important;
+  line-height: 1.4 !important;
 }
-\.fsr-submit-btn:hover\ \{\ background:\ \#1a2b58;\ }
-\.fsr-success\ \{\ display:\ none;\ background:\ \#e8f5e9;\ border:\ 1px\ solid\ \#4caf50;\ border-radius:\ 6px;\ padding:\ 16px;\ color:\ \#2e7d32;\ font-weight:\ 600;\ margin-top:\ 10px;\ }
+.fsr-row-4col {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px 18px;
+  margin-bottom: 16px !important;
+}
+.fsr-row-3col {
+  display: grid;
+  grid-template-columns: 1fr 1.35fr 1.65fr;
+  gap: 16px 18px;
+  margin-bottom: 16px !important;
+}
+.fsr-row-1col {
+  margin-bottom: 16px !important;
+}
+.fsr-field label {
+  display: block !important;
+  margin-bottom: 7px !important;
+  color: #15223a !important;
+  font-family: inherit !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0 !important;
+  line-height: 1.25 !important;
+  text-transform: none !important;
+}
+.fsr-field label .req {
+  color: #c1272d !important;
+}
+.fsr-field input[type=text],
+.fsr-field input[type=email],
+.fsr-field input[type=tel],
+.fsr-field textarea {
+  width: 100% !important;
+  box-sizing: border-box !important;
+  padding: 10px 12px !important;
+  border: 1px solid #c6ced8 !important;
+  border-radius: 4px !important;
+  background: #fff !important;
+  color: #172033 !important;
+  font-family: inherit !important;
+  font-size: 15px !important;
+  line-height: 1.35 !important;
+}
+.fsr-field input[type=text],
+.fsr-field input[type=email],
+.fsr-field input[type=tel] {
+  min-height: 42px !important;
+}
+.fsr-field textarea {
+  min-height: 126px !important;
+  resize: vertical;
+}
+.fsr-consent {
+  max-width: 780px;
+  margin-bottom: 16px !important;
+  color: #384456 !important;
+  font-family: inherit !important;
+  font-size: 13px !important;
+  line-height: 1.55 !important;
+}
+.fsr-submit-btn {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 10px 30px !important;
+  border: none !important;
+  border-radius: 999px !important;
+  background: #22376d !important;
+  color: #fff !important;
+  font-family: inherit !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  cursor: pointer;
+}
+.fsr-submit-btn:hover {
+  background: #1a2b58 !important;
+}
+.fsr-success {
+  display: none;
+  margin-top: 10px !important;
+  padding: 16px !important;
+  border: 1px solid #4caf50 !important;
+  border-radius: 6px !important;
+  background: #e8f5e9 !important;
+  color: #2e7d32 !important;
+  font-family: inherit !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+}
+@media (max-width: 900px) {
+  .fsr-row-4col,
+  .fsr-row-3col {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 640px) {
+  .fsr-row-4col,
+  .fsr-row-3col {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}
 </style>
-<form\ class="fsr-contact-form"\ id="fsr-static-contact-form"\ novalidate>
-\ \ <div\ class="fsr-fields-note">Fields\ Marked\ With\ An\ \*\ Are\ Required</div>
-\ \ <div\ class="fsr-row-4col">
-\ \ \ \ <div\ class="fsr-field"><label\ for="fsr-fname">First\ Name\ <span\ class="req">\*</span></label><input\ type="text"\ id="fsr-fname"\ name="fname"\ required\ autocomplete="given-name"></div>
-\ \ \ \ <div\ class="fsr-field"><label\ for="fsr-lname">Last\ Name\ <span\ class="req">\*</span></label><input\ type="text"\ id="fsr-lname"\ name="lname"\ required\ autocomplete="family-name"></div>
-\ \ \ \ <div\ class="fsr-field"><label\ for="fsr-phone">Cell\ Phone\ <span\ class="req">\*</span></label><input\ type="tel"\ id="fsr-phone"\ name="phone"\ required\ autocomplete="tel"></div>
-\ \ \ \ <div\ class="fsr-field"><label\ for="fsr-email">Personal\ Email\ <span\ class="req">\*</span></label><input\ type="email"\ id="fsr-email"\ name="email"\ required\ autocomplete="email"></div>
-\ \ </div>
-\ \ <div\ class="fsr-row-3col">
-\ \ \ \ <div\ class="fsr-field"><label\ for="fsr-dob">Date\ of\ Birth\ <span\ class="req">\*</span></label><input\ type="text"\ id="fsr-dob"\ name="dob"\ placeholder="MM/DD/YYYY"\ required></div>
-\ \ \ \ <div\ class="fsr-field"><label\ for="fsr-agency">Federal\ Agency\ <span\ class="req">\*</span></label><input\ type="text"\ id="fsr-agency"\ name="agency"\ required></div>
-\ \ \ \ <div\ class="fsr-field"><label\ for="fsr-service">Years/Months\ of\ Service\ <span\ class="req">\*</span></label><input\ type="text"\ id="fsr-service"\ name="service"\ required></div>
-\ \ </div>
-\ \ <div\ class="fsr-row-1col">
-\ \ \ \ <div\ class="fsr-field"><label\ for="fsr-comments">Questions\ /\ Comments\?\ <span\ class="req">\*</span></label><textarea\ id="fsr-comments"\ name="comments"\ required></textarea></div>
-\ \ </div>
-\ \ <div\ class="fsr-consent">By\ submitting\ this\ form,\ I\ consent\ to\ receive\ messages\ related\ to\ services\ I\ have\ requested\.\ These\ messages\ may\ include\ appointment\ confirmations,\ reminders,\ and\ summaries\ of\ topics\ discussed,\ among\ others\.\ Message\ frequency\ may\ vary\.\ Message\ &amp;\ Data\ rates\ may\ apply\.\ Reply\ HELP\ for\ help\ or\ STOP\ to\ opt\ out\.</div>
-\ \ <div\ class="fsr-row-1col">
-\ \ \ \ <div\ class="fsr-field"><label\ for="fsr-spam">In\ order\ to\ fight\ spam,\ what\ is\ 11\+7\?\ <span\ class="req">\*</span></label><input\ type="text"\ id="fsr-spam"\ name="spam"\ required\ style="max-width:220px;"></div>
-\ \ </div>
-\ \ <button\ type="submit"\ class="fsr-submit-btn">Submit</button>
-\ \ <div\ class="fsr-success"\ id="fsr-success-msg">Thank\ you!\ Your\ message\ has\ been\ received\.\ We&\#39;ll\ be\ in\ touch\ shortly\.</div>
+<form class="fsr-contact-form" id="fsr-static-contact-form" novalidate>
+  <div class="fsr-fields-note">Fields Marked With An * Are Required</div>
+  <div class="fsr-row-4col">
+    <div class="fsr-field"><label for="fsr-fname">First Name <span class="req">*</span></label><input type="text" id="fsr-fname" name="fname" required autocomplete="given-name"></div>
+    <div class="fsr-field"><label for="fsr-lname">Last Name <span class="req">*</span></label><input type="text" id="fsr-lname" name="lname" required autocomplete="family-name"></div>
+    <div class="fsr-field"><label for="fsr-phone">Cell Phone <span class="req">*</span></label><input type="tel" id="fsr-phone" name="phone" required autocomplete="tel"></div>
+    <div class="fsr-field"><label for="fsr-email">Personal Email <span class="req">*</span></label><input type="email" id="fsr-email" name="email" required autocomplete="email"></div>
+  </div>
+  <div class="fsr-row-3col">
+    <div class="fsr-field"><label for="fsr-dob">Date of Birth <span class="req">*</span></label><input type="text" id="fsr-dob" name="dob" placeholder="MM/DD/YYYY" required></div>
+    <div class="fsr-field"><label for="fsr-agency">Federal Agency <span class="req">*</span></label><input type="text" id="fsr-agency" name="agency" required></div>
+    <div class="fsr-field"><label for="fsr-service">Years/Months of Service <span class="req">*</span></label><input type="text" id="fsr-service" name="service" required></div>
+  </div>
+  <div class="fsr-row-1col">
+    <div class="fsr-field"><label for="fsr-comments">Questions / Comments? <span class="req">*</span></label><textarea id="fsr-comments" name="comments" required></textarea></div>
+  </div>
+  <div class="fsr-consent">By submitting this form, I consent to receive messages related to services I have requested. These messages may include appointment confirmations, reminders, and summaries of topics discussed, among others. Message frequency may vary. Message &amp; Data rates may apply. Reply HELP for help or STOP to opt out.</div>
+  <div class="fsr-row-1col">
+    <div class="fsr-field"><label for="fsr-spam">In order to fight spam, what is 11+7? <span class="req">*</span></label><input type="text" id="fsr-spam" name="spam" required style="max-width:220px;"></div>
+  </div>
+  <button type="submit" class="fsr-submit-btn">Submit</button>
+  <div class="fsr-success" id="fsr-success-msg">Thank you! Your message has been received. We&#39;ll be in touch shortly.</div>
 </form>
 <script>
-\(function\(\)\{
-\ \ var\ form\ =\ document\.getElementById\('fsr-static-contact-form'\);
-\ \ if\(!form\)\ return;
-\ \ form\.addEventListener\('submit',\ function\(e\)\{
-\ \ \ \ e\.preventDefault\(\);
-\ \ \ \ var\ spam\ =\ document\.getElementById\('fsr-spam'\)\.value\.trim\(\);
-\ \ \ \ if\(spam\ !==\ '18'\)\{\ alert\('Incorrect\ spam\ answer\.\ Hint:\ 11\+7\ =\ 18'\);\ return;\ }
-\ \ \ \ form\.style\.display\ =\ 'none';
-\ \ \ \ document\.getElementById\('fsr-success-msg'\)\.style\.display\ =\ 'block';
-\ \ }\);
-}\)\(\);
-</script>\t\t</div>\ 
+(function(){
+  var form = document.getElementById('fsr-static-contact-form');
+  if(!form) return;
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var spam = document.getElementById('fsr-spam').value.trim();
+    if(spam !== '18'){ alert('Incorrect spam answer. Hint: 11+7 = 18'); return; }
+    form.style.display = 'none';
+    document.getElementById('fsr-success-msg').style.display = 'block';
+  });
+})();
+</script>tt</div> 
 	</div>
 	</div> 
 </div></div>
