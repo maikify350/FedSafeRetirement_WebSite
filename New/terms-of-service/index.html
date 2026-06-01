@@ -255,6 +255,50 @@ body .container-wrap {
 .wpb_wrapper:has(> .fedsafe-contact-phone-block) > .nectar-responsive-text p {
   margin-bottom: 0 !important;
 }
+.fedsafe-footer-pill-link,
+.wpb_wrapper:has(> .fedsafe-contact-phone-block) > .nectar-cta:not(:has(a[href*="think-youre-ready"])) a.link_text {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 24px !important;
+  border-radius: 999px !important;
+  background: #003058 !important;
+  color: #fff !important;
+  font-family: 'Oswald', sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  letter-spacing: .02em !important;
+  line-height: 1 !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  text-transform: none !important;
+  white-space: nowrap;
+}
+.fedsafe-footer-pill-link:hover,
+.wpb_wrapper:has(> .fedsafe-contact-phone-block) > .nectar-cta:not(:has(a[href*="think-youre-ready"])) a.link_text:hover {
+  background: #c1260d !important;
+  color: #fff !important;
+}
+.fedsafe-footer-middle-cta {
+  margin-top: 12px;
+}
+.wpb_wrapper:has(> .fedsafe-contact-phone-block) > .nectar-cta:has(a[href*="think-youre-ready"]) {
+  display: none !important;
+}
+.wpb_wrapper:has(> .fedsafe-contact-phone-block) > .nectar-cta:not(:has(a[href*="think-youre-ready"])) {
+  display: flex !important;
+  justify-content: center;
+}
+.wpb_wrapper:has(> .fedsafe-contact-phone-block) > .nectar-cta:not(:has(a[href*="think-youre-ready"])) .link_wrap,
+.wpb_wrapper:has(> .fedsafe-contact-phone-block) > .nectar-cta:not(:has(a[href*="think-youre-ready"])) .nectar-button-type {
+  display: flex !important;
+  justify-content: center;
+}
+.wpb_wrapper:has(> .fedsafe-contact-phone-block) > .nectar-cta:not(:has(a[href*="think-youre-ready"])) svg,
+.wpb_wrapper:has(> .fedsafe-contact-phone-block) > .nectar-cta:not(:has(a[href*="think-youre-ready"])) .line {
+  display: none !important;
+}
 </style>
 <style id="fedsafe-legal-page-css">
 .fedsafe-legal-page {
@@ -664,7 +708,7 @@ once the decisions are clear.</p>
         
       </div>
     </div><div class="nectar-responsive-text nectar-link-underline-effect"><p>Education-first retirement planning for employees and retirees across all federal agencies and USPS.</p>
-</div>
+</div><a class="fedsafe-footer-pill-link fedsafe-footer-schedule-pill fedsafe-footer-middle-cta" href="../think-youre-ready/">Schedule A Free Retirement Review</a>
 		</div> 
 	</div>
 	</div> 
