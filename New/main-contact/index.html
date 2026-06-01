@@ -354,19 +354,148 @@ body .container-wrap {
 <div class="vc_column-inner"><div class="column-bg-overlay-wrap column-bg-layer" data-bg-animation="none"><div class="column-bg-overlay" style="opacity: 1; background-color: #C5C5C5;"></div></div>
 <div class="wpb_wrapper">
 <style>
-.fsr-contact-form{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
-.fsr-fields-note{font-size:13px;color:#555;margin-bottom:14px}
-.fsr-row-4col{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:12px;margin-bottom:12px}
-.fsr-row-3col{display:grid;grid-template-columns:25% 32% 43%;gap:12px;margin-bottom:12px}
-.fsr-row-1col{margin-bottom:12px}
-.fsr-field label{display:block;font-size:13px;font-weight:600;color:#222;margin-bottom:4px}
-.fsr-field label .req{color:#C1272B}
-.fsr-field input[type=text],.fsr-field input[type=email],.fsr-field input[type=tel],.fsr-field textarea{width:100%;box-sizing:border-box;padding:8px 10px;border:1px solid #bbb;border-radius:3px;font-size:14px;background:#fff;color:#333}
-.fsr-field textarea{min-height:110px;resize:vertical}
-.fsr-consent{font-size:12px;color:#333;line-height:1.6;margin-bottom:14px}
-.fsr-submit-btn{display:inline-block;padding:10px 28px;background:#22376D;color:#fff;border:none;border-radius:20px;font-size:14px;font-weight:600;cursor:pointer}
-.fsr-submit-btn:hover{background:#1a2b58}
-.fsr-success{display:none;background:#e8f5e9;border:1px solid #4caf50;border-radius:6px;padding:16px;color:#2e7d32;font-weight:600;margin-top:10px}
+#contact {
+  padding-top: 128px !important;
+  padding-bottom: 56px !important;
+}
+#contact .vc_col-sm-12[data-bg-color="#C5C5C5"] {
+  max-width: 980px;
+  margin-right: auto !important;
+  margin-left: auto !important;
+  padding: 34px 38px !important;
+  border-radius: 14px !important;
+  box-shadow: 0 18px 48px rgba(12, 28, 52, .12);
+}
+#contact .column-bg-overlay {
+  background-color: #f1f3f6 !important;
+}
+.fsr-contact-form {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important;
+  font-size: 16px !important;
+  color: #172033 !important;
+}
+.fsr-fields-note {
+  margin-bottom: 18px !important;
+  color: #526070 !important;
+  font-family: inherit !important;
+  font-size: 14px !important;
+  line-height: 1.4 !important;
+}
+.fsr-row-4col {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px 18px;
+  margin-bottom: 16px !important;
+}
+.fsr-row-3col {
+  display: grid;
+  grid-template-columns: 1fr 1.35fr 1.65fr;
+  gap: 16px 18px;
+  margin-bottom: 16px !important;
+}
+.fsr-row-1col {
+  margin-bottom: 16px !important;
+}
+.fsr-field label {
+  display: block !important;
+  margin-bottom: 7px !important;
+  color: #15223a !important;
+  font-family: inherit !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0 !important;
+  line-height: 1.25 !important;
+  text-transform: none !important;
+}
+.fsr-field label .req {
+  color: #c1272d !important;
+}
+.fsr-field input[type=text],
+.fsr-field input[type=email],
+.fsr-field input[type=tel],
+.fsr-field textarea {
+  width: 100% !important;
+  box-sizing: border-box !important;
+  padding: 10px 12px !important;
+  border: 1px solid #c6ced8 !important;
+  border-radius: 4px !important;
+  background: #fff !important;
+  color: #172033 !important;
+  font-family: inherit !important;
+  font-size: 15px !important;
+  line-height: 1.35 !important;
+}
+.fsr-field input[type=text],
+.fsr-field input[type=email],
+.fsr-field input[type=tel] {
+  min-height: 42px !important;
+}
+.fsr-field textarea {
+  min-height: 126px !important;
+  resize: vertical;
+}
+.fsr-consent {
+  max-width: 780px;
+  margin-bottom: 16px !important;
+  color: #384456 !important;
+  font-family: inherit !important;
+  font-size: 13px !important;
+  line-height: 1.55 !important;
+}
+.fsr-submit-btn {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 10px 30px !important;
+  border: none !important;
+  border-radius: 999px !important;
+  background: #22376d !important;
+  color: #fff !important;
+  font-family: inherit !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  cursor: pointer;
+}
+.fsr-submit-btn:hover {
+  background: #1a2b58 !important;
+}
+.fsr-success {
+  display: none;
+  margin-top: 10px !important;
+  padding: 16px !important;
+  border: 1px solid #4caf50 !important;
+  border-radius: 6px !important;
+  background: #e8f5e9 !important;
+  color: #2e7d32 !important;
+  font-family: inherit !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+}
+@media (max-width: 900px) {
+  #contact {
+    padding-top: 116px !important;
+  }
+  .fsr-row-4col,
+  .fsr-row-3col {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 640px) {
+  #contact {
+    padding-top: 108px !important;
+    padding-bottom: 38px !important;
+  }
+  #contact .vc_col-sm-12[data-bg-color="#C5C5C5"] {
+    width: calc(100% - 28px) !important;
+    padding: 24px 18px !important;
+  }
+  .fsr-row-4col,
+  .fsr-row-3col {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}
 </style>
 <form class="fsr-contact-form" id="fsr-static-contact-form" novalidate>
 <div class="fsr-fields-note">Fields Marked With An * Are Required</div>
