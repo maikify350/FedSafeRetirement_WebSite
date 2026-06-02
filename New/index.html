@@ -1823,6 +1823,33 @@
 .fedsafe-home-hero-actions .primary {
   background: #c1260d;
   color: #fff;
+  transform-origin: center;
+  animation: fedsafe-cta-grow-bounce 2.7s ease-in-out infinite;
+  box-shadow: 0 8px 18px rgba(193, 38, 13, 0.24);
+  will-change: transform;
+}
+.fedsafe-home-hero-actions .primary:hover,
+.fedsafe-home-hero-actions .primary:focus-visible {
+  animation-play-state: paused;
+  transform: scale(1.045);
+  box-shadow: 0 12px 24px rgba(193, 38, 13, 0.34);
+}
+@keyframes fedsafe-cta-grow-bounce {
+  0%, 72%, 100% {
+    transform: scale(1);
+  }
+  8% {
+    transform: scale(1.06);
+  }
+  15% {
+    transform: scale(0.985);
+  }
+  22% {
+    transform: scale(1.035);
+  }
+  30% {
+    transform: scale(1);
+  }
 }
 .fedsafe-home-hero-actions .secondary {
   background: rgba(255,255,255,0.82);
@@ -2002,8 +2029,10 @@
 
 @media only screen and (min-width: 1321px) {
   #header-outer {
-    left: clamp(42px, 5vw, 110px) !important;
-    right: clamp(42px, 5vw, 110px) !important;
+    left: 50% !important;
+    right: auto !important;
+    width: min(calc(100vw - 128px), 1348px) !important;
+    transform: translateX(-50%) !important;
   }
 }
 @media only screen and (max-width: 1320px) and (min-width: 1000px) {
@@ -2357,7 +2386,7 @@ height: 50px !important;
 													<h1>Helping Federal &amp; Postal Employees Navigate Retirement <span>With Confidence.</span></h1>
 													<p>Federal retirement transition specialists providing retirement education, benefits guidance, and workforce readiness programs trusted by employees across all federal agencies.</p>
 													<div class="fedsafe-home-hero-actions">
-														<a class="primary" href="./think-youre-ready/">Join Our Federal Retirement Updates List</a>
+														<a class="primary" href="./retirement-updates/">Join Our Federal Retirement Updates List</a>
 														<a class="secondary" href="./#about">Watch: Who We Are</a>
 													</div>
 													<div class="fedsafe-home-hero-trust">

@@ -388,8 +388,10 @@ body .container-wrap {
 
 @media only screen and (min-width: 1321px) {
   #header-outer {
-    left: clamp(42px, 5vw, 110px) !important;
-    right: clamp(42px, 5vw, 110px) !important;
+    left: 50% !important;
+    right: auto !important;
+    width: min(calc(100vw - 128px), 1348px) !important;
+    transform: translateX(-50%) !important;
   }
 }
 @media only screen and (max-width: 1320px) and (min-width: 1000px) {
@@ -648,8 +650,8 @@ body.page-id-2435 .container-wrap {
   font-size: 16px !important;
 }
 #contact {
-  padding-top: 64px !important;
-  padding-bottom: 56px !important;
+  padding-top: 0 !important;
+  padding-bottom: 28px !important;
 }
 #contact .wpb_wrapper,
 #contact p {
@@ -660,7 +662,7 @@ body.page-id-2435 .container-wrap {
   max-width: 980px;
   margin-right: auto !important;
   margin-left: auto !important;
-  padding: 34px 38px !important;
+  padding: 24px 32px !important;
   border-radius: 14px !important;
   box-shadow: 0 18px 48px rgba(12, 28, 52, .12);
 }
@@ -802,7 +804,7 @@ body.page-id-2435 .img-with-aniamtion-wrap.custom-width-50pct img {
 }
 @media (max-width: 900px) {
   #contact {
-    padding-top: 54px !important;
+    padding-top: 0 !important;
   }
   .fsr-row-4col,
   .fsr-row-3col {
@@ -829,12 +831,12 @@ body.page-id-2435 .img-with-aniamtion-wrap.custom-width-50pct img {
     width: 180px !important;
   }
   #contact {
-    padding-top: 42px !important;
-    padding-bottom: 38px !important;
+    padding-top: 0 !important;
+    padding-bottom: 24px !important;
   }
   #contact .vc_col-sm-12[data-bg-color="#C5C5C5"] {
     width: calc(100% - 28px) !important;
-    padding: 24px 18px !important;
+    padding: 18px 14px !important;
   }
   .fsr-row-4col,
   .fsr-row-3col {

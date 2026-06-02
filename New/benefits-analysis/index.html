@@ -576,8 +576,10 @@ body .container-wrap {
 
 @media only screen and (min-width: 1321px) {
   #header-outer {
-    left: clamp(42px, 5vw, 110px) !important;
-    right: clamp(42px, 5vw, 110px) !important;
+    left: 50% !important;
+    right: auto !important;
+    width: min(calc(100vw - 128px), 1348px) !important;
+    transform: translateX(-50%) !important;
   }
 }
 @media only screen and (max-width: 1320px) and (min-width: 1000px) {
