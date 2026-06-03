@@ -674,7 +674,7 @@ body.page-id-2305 .container-wrap.fedsafe-agencies-redesign {
   width: min(100% - 32px, 2048px);
   min-height: clamp(620px, 50vw, 780px);
   margin: 0 auto 10px;
-  padding-bottom: clamp(34px, 3vw, 54px);
+  padding-bottom: 6px;
   box-sizing: border-box;
   overflow: hidden;
   background: #002443;
@@ -705,7 +705,7 @@ body.page-id-2305 .container-wrap.fedsafe-agencies-redesign {
   z-index: 2;
   width: min(50%, 820px);
   box-sizing: border-box;
-  padding: clamp(42px, 4.8vw, 86px) clamp(38px, 6vw, 118px);
+  padding: clamp(42px, 4.8vw, 86px) clamp(38px, 6vw, 118px) clamp(18px, 1.8vw, 28px);
   transform: translateX(-14px);
   color: #fff;
 }
@@ -770,9 +770,10 @@ body.page-id-2305 .container-wrap.fedsafe-agencies-redesign {
 .fedsafe-agency-proof-wide {
   position: relative;
   z-index: 2;
-  width: min(100% - 144px, 1120px);
-  max-width: 1120px;
-  margin: clamp(8px, 1.2vw, 18px) auto 0;
+  width: calc(100% - 88px);
+  max-width: none;
+  gap: clamp(18px, 3vw, 56px);
+  margin: 6px auto;
 }
 .fedsafe-agency-proof-item {
   display: grid;
@@ -782,12 +783,13 @@ body.page-id-2305 .container-wrap.fedsafe-agencies-redesign {
   min-width: 0;
   color: rgba(255, 255, 255, .86);
   font-family: 'Oswald', sans-serif;
-  font-size: clamp(15px, 1.04vw, 20px);
+  font-size: clamp(17px, 1.18vw, 24px);
   font-weight: 400;
   line-height: 1.25;
 }
 .fedsafe-agency-proof-wide .fedsafe-agency-proof-item {
   justify-content: center;
+  white-space: nowrap;
 }
 .fedsafe-agency-proof-icon {
   display: grid;
@@ -805,7 +807,7 @@ body.page-id-2305 .container-wrap.fedsafe-agencies-redesign {
   align-items: center;
   flex-wrap: wrap;
   gap: 24px 48px;
-  margin-top: clamp(26px, 3vw, 46px);
+  margin-top: clamp(12px, 2.1vw, 32px);
 }
 .fedsafe-agency-primary,
 .fedsafe-agency-secondary {
@@ -946,6 +948,9 @@ body.page-id-2305 .container-wrap.fedsafe-agencies-redesign {
   .fedsafe-agency-proof-item {
     grid-template-columns: 54px 1fr;
     font-size: 17px;
+  }
+  .fedsafe-agency-proof-wide .fedsafe-agency-proof-item {
+    white-space: normal;
   }
   .fedsafe-agency-proof-icon {
     width: 54px;
