@@ -674,6 +674,8 @@ body.page-id-2305 .container-wrap.fedsafe-agencies-redesign {
   width: min(100% - 32px, 2048px);
   min-height: clamp(620px, 50vw, 780px);
   margin: 0 auto 10px;
+  padding-bottom: clamp(34px, 3vw, 54px);
+  box-sizing: border-box;
   overflow: hidden;
   background: #002443;
   box-shadow: 0 18px 50px rgba(0, 0, 0, 0.14);
@@ -765,6 +767,13 @@ body.page-id-2305 .container-wrap.fedsafe-agencies-redesign {
   max-width: 900px;
   margin: clamp(28px, 3.2vw, 54px) 0 clamp(24px, 2.4vw, 40px);
 }
+.fedsafe-agency-proof-wide {
+  position: relative;
+  z-index: 2;
+  width: min(100% - 144px, 1120px);
+  max-width: 1120px;
+  margin: clamp(8px, 1.2vw, 18px) auto 0;
+}
 .fedsafe-agency-proof-item {
   display: grid;
   grid-template-columns: 58px 1fr;
@@ -776,6 +785,9 @@ body.page-id-2305 .container-wrap.fedsafe-agencies-redesign {
   font-size: clamp(15px, 1.04vw, 20px);
   font-weight: 400;
   line-height: 1.25;
+}
+.fedsafe-agency-proof-wide .fedsafe-agency-proof-item {
+  justify-content: center;
 }
 .fedsafe-agency-proof-icon {
   display: grid;
@@ -793,6 +805,7 @@ body.page-id-2305 .container-wrap.fedsafe-agencies-redesign {
   align-items: center;
   flex-wrap: wrap;
   gap: 24px 48px;
+  margin-top: clamp(26px, 3vw, 46px);
 }
 .fedsafe-agency-primary,
 .fedsafe-agency-secondary {
@@ -925,6 +938,11 @@ body.page-id-2305 .container-wrap.fedsafe-agencies-redesign {
     gap: 14px;
     margin: 28px 0;
   }
+  .fedsafe-agency-proof-wide {
+    width: calc(100% - 52px);
+    max-width: 420px;
+    margin: 8px auto 34px;
+  }
   .fedsafe-agency-proof-item {
     grid-template-columns: 54px 1fr;
     font-size: 17px;
@@ -992,16 +1010,14 @@ body.page-id-2305 .container-wrap.fedsafe-agencies-redesign {
       <div class="fedsafe-agency-eyebrow">For Agencies</div>
       <h1>Federal Retirement Education for Agencies</h1>
       <p>Structured briefings that help federal and postal employees understand retirement decisions before deadlines and elections are finalized.</p>
-      <div class="fedsafe-agency-proof" aria-label="Agency briefing details">
-        <div class="fedsafe-agency-proof-item"><span class="fedsafe-agency-proof-icon">HR</span><span>For federal and postal employees under FERS and CSRS</span></div>
-        <div class="fedsafe-agency-proof-item"><span class="fedsafe-agency-proof-icon">ON</span><span>Available virtually or on-site nationwide</span></div>
-        <div class="fedsafe-agency-proof-item"><span class="fedsafe-agency-proof-icon">SAM</span><span>Led by a SAM.gov registered federal contractor</span></div>
-      </div>
       <div class="fedsafe-agency-actions">
         <a class="fedsafe-agency-primary" href="../for-agencies-contact/">Request an Agency Briefing</a>
-        <a class="fedsafe-agency-secondary" href="#briefings-cover">See What Briefings Cover</a>
       </div>
-      <p class="fedsafe-agency-registration">UEI: PPQ9UAWNKQ84&nbsp;&nbsp;|&nbsp;&nbsp;CAGE: 1A8S5</p>
+    </div>
+    <div class="fedsafe-agency-proof fedsafe-agency-proof-wide" aria-label="Agency briefing details">
+      <div class="fedsafe-agency-proof-item"><span class="fedsafe-agency-proof-icon">HR</span><span>For federal and postal employees under FERS and CSRS</span></div>
+      <div class="fedsafe-agency-proof-item"><span class="fedsafe-agency-proof-icon">ON</span><span>Available virtually or on-site nationwide</span></div>
+      <div class="fedsafe-agency-proof-item"><span class="fedsafe-agency-proof-icon">SAM</span><span>Led by a SAM.gov registered federal contractor</span></div>
     </div>
   </section>
   <section id="briefings-cover" class="fedsafe-agency-frame" aria-label="Why agencies bring FedSafe in">
