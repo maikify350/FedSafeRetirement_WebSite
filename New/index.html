@@ -1776,6 +1776,48 @@
   transform: translateX(-28px);
   color: #003058;
 }
+.fedsafe-hero-phone-pill {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 230px;
+  min-height: 74px;
+  margin: 0 0 26px;
+  padding: 8px 26px 10px;
+  border: 1px solid rgba(255,255,255,.72);
+  border-radius: 999px;
+  background: #003058;
+  color: #fff !important;
+  box-shadow: 0 10px 24px rgba(0, 48, 88, .2);
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 0;
+  line-height: 1;
+  text-decoration: none !important;
+  text-transform: uppercase;
+}
+.fedsafe-hero-phone-pill strong {
+  display: block;
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1;
+}
+.fedsafe-hero-phone-pill small {
+  display: block;
+  margin-top: 6px;
+  color: rgba(255,255,255,.9);
+  font-family: Manrope, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: .02em;
+  text-transform: none;
+}
+.fedsafe-hero-phone-pill:hover {
+  background: #c1260d;
+  color: #fff !important;
+}
 .fedsafe-home-hero-copy h1 {
   margin: 0 0 16px;
   color: #003058;
@@ -1895,6 +1937,10 @@
     padding-right: 18px;
     transform: none;
   }
+  .fedsafe-hero-phone-pill {
+    align-self: flex-start;
+    margin-left: 0;
+  }
   .fedsafe-home-hero-copy p {
     max-width: 520px;
   }
@@ -1912,6 +1958,20 @@
     padding-top: 38px;
     padding-left: 0;
     padding-right: 0;
+  }
+  .fedsafe-hero-phone-pill {
+    align-self: flex-start;
+    min-width: 218px;
+    min-height: 68px;
+    margin-bottom: 22px;
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+  .fedsafe-hero-phone-pill strong {
+    font-size: 24px;
+  }
+  .fedsafe-hero-phone-pill small {
+    font-size: 13px;
   }
   .fedsafe-home-hero-copy h1 {
     width: 100%;
@@ -2276,7 +2336,6 @@ height: 50px !important;
 								<div class="nectar-mobile-only mobile-header">
 									<div class="inner"></div>
 								</div>
-								<a class="fedsafe-header-phone" href="tel:+17713337233" aria-label="Call FedSafe Retirement at 1-771-FED-SAFE">1-771-FED-SAFE</a>
 								<div class="slide-out-widget-area-toggle mobile-icon fullscreen-alt"
 									data-custom-color="false" data-icon-animation="simple-transform">
 									<div> <a href="#slide-out-widget-area" role="button" aria-label="Navigation Menu"
@@ -2411,6 +2470,7 @@ height: 50px !important;
 											</div>
 											<div class="wpb_wrapper">
 												<div class="fedsafe-home-hero-copy">
+													<a class="fedsafe-hero-phone-pill" href="tel:+17713337233" aria-label="Call FedSafe Retirement at 771-FEDSAFE, 333-7233"><strong>771-FEDSAFE</strong><small>(333 - 7233)</small></a>
 													<h1>Helping Federal &amp; Postal Employees Navigate Retirement <span>With Confidence.</span></h1>
 													<p>Federal retirement transition specialists providing retirement education, benefits guidance, and workforce readiness programs trusted by employees across all federal agencies.</p>
 													<div class="fedsafe-home-hero-actions">
