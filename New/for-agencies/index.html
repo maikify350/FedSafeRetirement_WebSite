@@ -828,6 +828,9 @@ body.page-id-2305 .container-wrap.fedsafe-agencies-redesign {
   background: #d21e12;
   color: #fff;
   box-shadow: 0 12px 28px rgba(0, 0, 0, .25);
+  transform-origin: center;
+  animation: fedsafe-cta-grow-bounce 2.7s ease-in-out infinite;
+  will-change: transform;
 }
 .fedsafe-agency-secondary {
   min-height: 54px;
@@ -843,6 +846,29 @@ body.page-id-2305 .container-wrap.fedsafe-agencies-redesign {
 }
 .fedsafe-agency-primary::after {
   color: #fff;
+}
+.fedsafe-agency-primary:hover,
+.fedsafe-agency-primary:focus-visible {
+  animation-play-state: paused;
+  transform: scale(1.045);
+  box-shadow: 0 15px 32px rgba(0, 0, 0, .3);
+}
+@keyframes fedsafe-cta-grow-bounce {
+  0%, 72%, 100% {
+    transform: scale(1);
+  }
+  8% {
+    transform: scale(1.06);
+  }
+  15% {
+    transform: scale(0.985);
+  }
+  22% {
+    transform: scale(1.035);
+  }
+  30% {
+    transform: scale(1);
+  }
 }
 .fedsafe-agency-registration {
   margin-top: 24px !important;
