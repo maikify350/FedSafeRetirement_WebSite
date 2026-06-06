@@ -1863,7 +1863,7 @@
   display: none !important;
 }
 #fws_69d504036a2fe .column-overlay-layer {
-  background: linear-gradient(90deg, rgba(255,255,255,0.96) 0%, rgba(255,255,255,0.92) 42%, rgba(255,255,255,0.7) 60%, rgba(255,255,255,0.22) 78%, rgba(255,255,255,0) 100%) !important;
+  background: linear-gradient(90deg, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.82) 30%, rgba(255,255,255,0.36) 45%, rgba(255,255,255,0.08) 58%, rgba(255,255,255,0) 72%) !important;
   opacity: 1 !important;
 }
 #fws_69d504036a2fe > .row_col_wrap_12 > .wpb_column > .vc_column-inner {
@@ -2046,7 +2046,7 @@
 }
 @media only screen and (max-width: 999px) {
   #fws_69d504036a2fe .column-overlay-layer {
-    background: linear-gradient(180deg, rgba(255,255,255,0.82) 0%, rgba(255,255,255,0.68) 54%, rgba(255,255,255,0.28) 100%) !important;
+    background: linear-gradient(180deg, rgba(255,255,255,0.72) 0%, rgba(255,255,255,0.52) 54%, rgba(255,255,255,0.18) 100%) !important;
   }
   #fws_69d504036a2fe .column-image-tag {
     object-position: center center !important;
@@ -2255,6 +2255,81 @@
   }
   #header-outer .col.span_9 {
     justify-content: flex-end;
+  }
+}
+</style>
+<style>
+.fedsafe-video-modal-open {
+  overflow: hidden;
+}
+.fedsafe-video-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(16px, 4vw, 56px);
+}
+.fedsafe-video-modal.is-open {
+  display: flex;
+}
+.fedsafe-video-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(3, 18, 32, 0.88);
+  backdrop-filter: blur(6px);
+}
+.fedsafe-video-modal__dialog {
+  position: relative;
+  z-index: 1;
+  width: min(1120px, 100%);
+  max-height: calc(100vh - 48px);
+  border-radius: 8px;
+  border: 4px solid #f2c45d;
+  overflow: hidden;
+  background: #061d32;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.18), 0 0 34px rgba(242, 196, 93, 0.38), 0 34px 90px rgba(0, 0, 0, 0.48);
+}
+.fedsafe-video-modal__video {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  max-height: calc(100vh - 48px);
+  aspect-ratio: 16 / 9;
+  background: #000;
+  touch-action: manipulation;
+}
+.fedsafe-video-modal__close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 2;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  border-radius: 999px;
+  background: rgba(6, 29, 50, 0.82);
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 30px;
+  line-height: 38px;
+  text-align: center;
+  cursor: pointer;
+}
+.fedsafe-video-modal__close:hover,
+.fedsafe-video-modal__close:focus {
+  background: #c92712;
+  outline: none;
+}
+@media only screen and (max-width: 767px) {
+  .fedsafe-video-modal {
+    padding: 12px;
+  }
+  .fedsafe-video-modal__dialog,
+  .fedsafe-video-modal__video {
+    max-height: calc(100vh - 24px);
   }
 }
 </style>
@@ -2506,7 +2581,7 @@
 													<p>Federal retirement transition specialists providing retirement education, benefits guidance, and workforce readiness programs trusted by employees across all federal agencies.</p>
 													<div class="fedsafe-home-hero-actions">
 														<a class="primary" href="./retirement-updates/">Join Our Federal Retirement Updates List</a>
-														<a class="secondary" href="./#about">Watch: Who We Are</a>
+														<a class="secondary" href="assets/videos/fedsafe-who-we-are-homepage-video.mp4?v=20260606-1345" data-fedsafe-video>Watch: Who We Are</a>
 													</div>
 													<div class="fedsafe-home-hero-trust">
 														<div>SAM.gov Registered Federal Contractor<small>UEI: PPQ9UAWNKQ84 CAGE Code: 1A8S5</small></div>
@@ -3979,7 +4054,7 @@
 													class="nectar-button jumbo regular extra-color-1  regular-button"
 													role="button"
 													style="margin-top: 10px; margin-right: 10px; margin-bottom: 10px; margin-left: 10px;color: #000000; background-color: #FFFFFF;"
-													href="https://fedsafev2.zeppelinwebsites.com/checklist/" data-color-override="#FFFFFF"
+													href="/checklist/" data-color-override="#FFFFFF"
 													data-hover-color-override="false"
 													data-hover-text-color-override="#fff"><span>Start The
 														Checklist</span></a>
@@ -4019,7 +4094,7 @@
 																			once the decisions are clear.</p>
 																	</div><a
 																		class="nectar-button medium regular accent-color  regular-button"
-																		role="button" style="" href="https://fedsafev2.zeppelinwebsites.com/checklist/"
+																		role="button" style="" href="/checklist/"
 																		data-color-override="false"
 																		data-hover-color-override="false"
 																		data-hover-text-color-override="#fff"><span>Start
@@ -4272,6 +4347,15 @@
 		</div>
 	</div><!--/ocm-effect-wrap-->
 
+	<div class="fedsafe-video-modal" id="fedsafe-who-we-are-modal" aria-hidden="true">
+		<div class="fedsafe-video-modal__backdrop" data-fedsafe-video-close></div>
+		<div class="fedsafe-video-modal__dialog" role="dialog" aria-modal="true" aria-label="FedSafe Retirement who we are video">
+			<button class="fedsafe-video-modal__close" type="button" aria-label="Close video" data-fedsafe-video-close>&times;</button>
+			<video class="fedsafe-video-modal__video" controls preload="auto" playsinline>
+				<source src="assets/videos/fedsafe-who-we-are-homepage-video.mp4?v=20260606-1345" type="video/mp4">
+			</video>
+		</div>
+	</div>
 
 	<!-- Bundled JS: 18 files → 2 bundles -->
 	<script src="assets/js/vendor-core.min.js"></script>
@@ -4284,6 +4368,56 @@
 		/* ]]> */
 	</script>
 	<script src="assets/js/theme-bundle.min.js"></script>
+	<script>
+		(function () {
+			var trigger = document.querySelector('[data-fedsafe-video]');
+			var modal = document.getElementById('fedsafe-who-we-are-modal');
+			if (!trigger || !modal) {
+				return;
+			}
+			var video = modal.querySelector('video');
+			var closeControls = modal.querySelectorAll('[data-fedsafe-video-close]');
+			var lastFocus = null;
+
+			function openModal(event) {
+				event.preventDefault();
+				lastFocus = document.activeElement;
+				modal.classList.add('is-open');
+				modal.setAttribute('aria-hidden', 'false');
+				document.body.classList.add('fedsafe-video-modal-open');
+				if (video) {
+					video.currentTime = 0;
+					video.play().catch(function () {});
+				}
+				var closeButton = modal.querySelector('.fedsafe-video-modal__close');
+				if (closeButton) {
+					closeButton.focus();
+				}
+			}
+
+			function closeModal() {
+				modal.classList.remove('is-open');
+				modal.setAttribute('aria-hidden', 'true');
+				document.body.classList.remove('fedsafe-video-modal-open');
+				if (video) {
+					video.pause();
+				}
+				if (lastFocus && typeof lastFocus.focus === 'function') {
+					lastFocus.focus();
+				}
+			}
+
+			trigger.addEventListener('click', openModal);
+			closeControls.forEach(function (control) {
+				control.addEventListener('click', closeModal);
+			});
+			document.addEventListener('keydown', function (event) {
+				if (event.key === 'Escape' && modal.classList.contains('is-open')) {
+					closeModal();
+				}
+			});
+		})();
+	</script>
 
 </body>
 
