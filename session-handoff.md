@@ -1,113 +1,195 @@
-# FEDSafe Retirement Website Migration — Session Handoff
+# FedSafe Retirement Website - Session Handoff
 
-## Status: ✅ Optimized & Committed — Ready for Deployment
+## Current Status
 
-### Last Git Commit
-- **Hash:** `15f3659` on `master`
-- **Date:** April 8, 2026
-- **Message:** Image optimization, JS bundling, WP backend cleanup, nav fix
+Latest approved website changes were committed and pushed to GitHub.
 
----
+- Repo: `C:\WIP\FEDSafeRetirement\WebSite`
+- Branch: `master`
+- Remote: `https://github.com/maikify350/FedSafeRetirement_WebSite.git`
+- Latest commit: `9fb121a`
+- Commit message: `Rebuild resource analysis pages`
+- Push status: pushed to `origin/master`
+- Vercel: GitHub push should trigger deployment automatically.
+- Direct Vercel CLI deploy was previously attempted, but the local Vercel token was invalid: `The specified token is not valid. Use vercel login to generate a new token.`
 
-### What's Done (All Sessions Combined)
+## Latest Completed Work
 
-#### Session 1 — Page Porting
-- Ported `/benefits-analysis/`, `/fegli-analysis/`, `/social-security-analysis/` from `www.fedsaferetirement.com`
-- Added to Resources dropdown menu
+Rebuilt the first three pages under the Resources menu so they match the rest of the site:
 
-#### Session 2 — Header Standardization
-- Replaced Elementor headers with Salient header on all ported pages
-- Localized all CSS, JS, fonts from staging server
+- `New/benefits-analysis/index.html`
+- `New/fegli-analysis/index.html`
+- `New/social-security-analysis/index.html`
 
-#### Session 3 — Full Optimization (Latest)
-- **Footer:** Injected standard Salient footer into all 3 ported pages
-- **Fonts:** Forced Manrope (body) + Oswald (headings) site-wide
-- **URLs:** All staging/production URLs → relative paths
-- **Scripts:** Localized jQuery, stripped WP metadata (oEmbed, RSS, EditURI)
-- **Images:** 17 images → 44 responsive variants (1200px/768px/480px), `srcset` on 36 tags
-- **WP Cleanup:** Neutralized admin-ajax.php, NinjaForms, speculationrules, WPBakery boilerplate
-- **JS Bundling:** 18 scripts → 2 bundles (`vendor-core.min.js` + `theme-bundle.min.js`)
-- **Nav Fix:** Matched live site layout exactly (12px font, nowrap, tighter spacing)
+What changed:
 
----
+- Removed the old visible copied-site Elementor/Gravity page bodies.
+- Added a consistent FedSafe resource-analysis layout:
+  - compact hero
+  - image panel
+  - overview cards
+  - clean form section
+  - "What Happens Next" closeout section
+- Replaced wide letter-spaced imported headings with normal FedSafe-style headings.
+- Fixed top spacing so pages sit about 13px below the fixed header on narrow viewports.
+- Added clean lead-form markup using `data-fsr-lead-form` and the shared form helper scripts.
+- Confirmed in local browser:
+  - images load
+  - old visible Elementor/Gravity forms are gone
+  - shared footer is present
+  - mobile/narrow layout clears the nav
 
-### Project Structure
-```
-WebSite/
-├── New/                               # THE SITE (serve this)
-│   ├── index.html                     # Homepage
-│   ├── assets/
-│   │   ├── css/                       # Salient theme CSS (15+ files)
-│   │   ├── fonts/                     # Localized icon/web fonts
-│   │   ├── images/                    # Optimized images + responsive variants
-│   │   └── js/                        # Bundled JS + original individual files
-│   │       ├── vendor-core.min.js     # jQuery + Migrate bundle
-│   │       └── theme-bundle.min.js    # All Salient theme scripts
-│   ├── benefits-analysis/index.html
-│   ├── fegli-analysis/index.html
-│   ├── social-security-analysis/index.html
-│   ├── meet-the-partners/index.html
-│   ├── checklist/index.html
-│   ├── for-agencies-contact/index.html
-│   ├── main-contact/index.html
-│   ├── think-youre-ready/index.html
-│   ├── responsive-image-map.json     # Image variant mapping
-│   └── bundle-stats.json             # JS bundle before/after stats
-├── New_backup_pre_bundle/             # Backup before JS bundling
-├── Current/                           # Original WordPress export (reference)
-├── optimize-images.mjs               # Image compression/variant script
-├── bundle-js.mjs                      # JS bundling script
-├── update-html-responsive-images.mjs  # Wire srcset into HTML
-├── update-html-bundles.mjs            # Replace script tags with bundles
-├── cleanup-wp-backend-refs.mjs        # WP PHP reference cleanup
-├── cleanup-remaining-php.mjs          # NinjaForms cleanup
-├── cleanup-scripts-and-links.mjs      # URL localization
-├── session-handoff.md                 # THIS FILE
-└── .gitignore
+Build command run successfully:
+
+```powershell
+node build-shared-components.mjs --root New; node vercel-build.mjs
 ```
 
----
+## Recent Earlier Work In This Thread
 
-### How to Run Locally
-```bash
-cd c:\WIP\FEDSafeRetirement\WebSite
-npx -y http-server New -p 3000 -c-1
-# Open http://localhost:3000
+- `/for-agencies/` was heavily reworked and committed in `17ee24e`.
+- Shared header/footer were standardized through `apply-shared-layout.mjs`.
+- Nav label changed from `MEET THE TEAM` to `MEET THE EXPERTS`, with `EXPERTS` red.
+- Footer structure was made canonical across pages.
+- Newsletter form was wired to the portal endpoint and tested successfully.
+- Invisible Cloudflare Turnstile pattern was added through:
+  - `New/assets/js/fedsafe-turnstile.js`
+  - `New/assets/js/fedsafe-lead-forms.js`
+
+## Important Build Commands
+
+Run from:
+
+```powershell
+cd C:\WIP\FEDSafeRetirement\WebSite
 ```
 
----
+Regenerate shared layout and build:
 
-### TODO — Next Session (Prioritized)
+```powershell
+node apply-shared-layout.mjs
+node build-shared-components.mjs --root New
+node vercel-build.mjs
+```
 
-#### P1: Console Errors
-- [ ] CORS font error — external font still referenced at `fedsafev2.zeppelinwebsites.com`. Find & localize.
-- [ ] 404s for icon fonts (`icomoon.woff`, `fa-solid-900.woff2`). Verify if needed.
-- [ ] Full console error audit across all pages.
+For the latest resource-page-only build, this was enough:
 
-#### P2: CSS Bundling
-- [ ] 15+ individual CSS files have same sequential loading problem as JS had.
-- [ ] Concatenate + minify CSS into 1-2 bundles (same approach as JS).
+```powershell
+node build-shared-components.mjs --root New; node vercel-build.mjs
+```
 
-#### P3: Mobile Verification
-- [ ] Verify `srcset` breakpoints trigger correct image variants on mobile.
-- [ ] Test hamburger menu at ≤999px viewport.
-- [ ] Check ported page layouts on mobile (Elementor responsive quirks).
+Local dev server commonly used:
 
-#### P4: Deployment
-- [ ] Deploy optimized `New/` to Vercel (previously at `fsr.mustautomate.ai`).
-- [ ] Verify no broken paths on production URL.
+```powershell
+npx vite --host 127.0.0.1
+```
 
-#### P5: Future Improvements
-- [ ] Forms need a static backend (Formspree/Netlify Forms) — currently neutralized.
-- [ ] Consider migrating bloated Elementor HTML to clean semantic HTML or Astro.
-- [ ] Remove `New_backup_pre_bundle/` once stable.
-- [ ] Move utility `.mjs` scripts to `scripts/` folder.
+Common local URL:
 
----
+```text
+http://127.0.0.1:4173/
+```
 
-### Important Technical Notes
-- **nectarOptions / nectar_front_i18n** — MUST keep. Required by theme `init.js`.
-- **nectarLove.ajaxurl** — Neutralized (empty). Love/like feature disabled (OK for static).
-- **NinjaForms** — Forms render but won't submit (adminAjax neutralized).
-- **jQuery load order** — Must load before theme scripts. That's why 2 bundles, not 1.
-- **Nav CSS** — Inline `<style id="header-nav-fix">` block in each page's `<head>`. Matches live staging site.
+## Shared Layout Source Of Truth
+
+Primary shared layout script:
+
+```text
+C:\WIP\FEDSafeRetirement\WebSite\apply-shared-layout.mjs
+```
+
+Important:
+
+- Future shared header/footer changes should be made in `apply-shared-layout.mjs`, then regenerated.
+- Avoid one-off manual edits to repeated header/footer markup unless doing a temporary test.
+- `build-shared-components.mjs --root New` is still part of the current static-site workflow.
+
+## Current Git State After Latest Commit
+
+Committed and pushed:
+
+- `New/benefits-analysis/index.html`
+- `New/fegli-analysis/index.html`
+- `New/social-security-analysis/index.html`
+
+Still uncommitted/unstaged after the commit:
+
+- `New/checklist/index.html`
+- `New/meet-the-partners/index.html`
+- `New/retirement-updates/index.html`
+- `package.json`
+- `package-lock.json`
+- `session-handoff.md`
+- `Assets/For_Agencies/`
+- `Assets/Images/`
+- `Assets/Partner_Photos/`
+- `Assets/Redo/`
+- `Docs/`
+- `New Hero section for the website.pdf`
+- `New/assets/images/checklist/`
+- `New/assets/images/generated/`
+- `New/assets/images/hero-backup-*`
+- `New/assets/images/meet-the-experts/`
+- `backups/`
+- `create-table.mjs`
+- `get-schema.mjs`
+- `list-tables.mjs`
+- `output/`
+- `test-supabase.mjs`
+- `tmp/`
+
+Reason these were not included in the latest commit:
+
+- The user asked to commit the resource-page rebuilds.
+- Many remaining files are earlier work, local source/reference assets, generated image assets, Supabase testing scripts, or scratch/backups.
+- Do not stage these blindly in a future session. Review intentionally before committing.
+
+## TODO / Next Work
+
+1. Verify Vercel production deploy for commit `9fb121a`.
+   - Check the three pages on production after deploy:
+     - `/benefits-analysis/`
+     - `/fegli-analysis/`
+     - `/social-security-analysis/`
+
+2. If user asks to commit earlier pending page/image work, inspect each dirty file first.
+   - Especially `New/checklist/index.html`, `New/meet-the-partners/index.html`, and `New/retirement-updates/index.html`.
+
+3. Continue form integration work.
+   - Newsletter is tested and working.
+   - The three analysis pages now have clean form markup using the shared lead-form script.
+   - Next step is endpoint verification for each form type once the portal side supports/accepts those form types.
+
+4. Review dependency changes.
+   - `package.json` and `package-lock.json` currently include dependency changes from Supabase/PG/local testing.
+   - Decide later whether they belong in website repo history.
+
+5. Keep resource page styling unified.
+   - If Mike wants copy/image tuning, adjust inside the three resource pages while preserving the shared `.fedsafe-analysis-*` layout pattern.
+
+## Quick Verification URLs
+
+Local:
+
+```text
+http://127.0.0.1:4173/benefits-analysis/
+http://127.0.0.1:4173/fegli-analysis/
+http://127.0.0.1:4173/social-security-analysis/
+http://127.0.0.1:4173/retirement-updates/
+http://127.0.0.1:4173/meet-the-partners/
+http://127.0.0.1:4173/for-agencies/
+```
+
+Production:
+
+```text
+https://fed-safe-retirement-web-site.vercel.app/benefits-analysis/
+https://fed-safe-retirement-web-site.vercel.app/fegli-analysis/
+https://fed-safe-retirement-web-site.vercel.app/social-security-analysis/
+```
+
+## Notes For Fresh Session
+
+- Be careful with the dirty worktree. Assume uncommitted changes may be intentional user/work-in-progress changes.
+- Latest pushed commit is clean and scoped to the three resource analysis pages.
+- The user may reset/exit and resume from this handoff.

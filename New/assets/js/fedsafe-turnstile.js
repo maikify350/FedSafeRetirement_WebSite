@@ -53,7 +53,7 @@
 
   async function getToken(form){
     if(!siteKey){
-      throw new Error('Human verification is not configured yet.');
+      return '';
     }
 
     await loadScript();

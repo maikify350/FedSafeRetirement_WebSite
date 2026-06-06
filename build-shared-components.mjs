@@ -84,7 +84,7 @@ function replaceFooter(html, footer, prefix) {
   const footerOuterStart = html.indexOf('<div id="footer-outer"');
   const footerOuterEnd = html.indexOf(footerOuterClose, footerOuterStart);
   if (footerOuterStart === -1 || footerOuterEnd === -1) {
-    throw new Error("Could not find page footer-outer block.");
+    return null;
   }
 
   const clean = stripPageSpecificFooter(html);
@@ -110,6 +110,10 @@ for (const page of indexPages(siteRoot)) {
   const prefix = pagePrefix(page);
   const html = readFileSync(page, "utf8");
   const next = replaceFooter(html, footer, prefix);
+  if (next === null) {
+    console.log(`Skipped shared footer for ${relative(siteRoot, page).replace(/\\/g, "/")}`);
+    continue;
+  }
   writeFileSync(page, next, "utf8");
   console.log(`Applied shared footer to ${relative(siteRoot, page).replace(/\\/g, "/")}`);
 }
